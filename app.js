@@ -6,11 +6,12 @@ let btnCancel = document.querySelector(".button-cancel");
 let btnArchiwum = document.querySelector(".button-archiwum");
 let pMain = document.querySelector(".p-main");
 let pSecond = document.querySelector(".p-second");
+let timeArray = [];
 let minutes = 0;
 let seconds = 0;
 let time;
 
-const functionPlay = () => {
+const fPlay = () => {
     clearInterval(time);
     time = setInterval(() => {
         seconds++
@@ -28,8 +29,22 @@ const functionPlay = () => {
     }, 100)
 };
 
-const functionPause = () => {
+const fPause = () => {
     clearInterval(time);
 }
-btnPlay.addEventListener("click", functionPlay);
-btnPause.addEventListener("click", functionPause);
+
+const fStop = () => {
+    
+    pSecond.innerHTML = `Twój ostatni czas: ${pMain.textContent}`
+    if(pMain.textContent !== "0.00") {
+        pSecond.style.visibility = "visible"
+        timeArray.push(pMain.textContent);
+    }
+    clearInterval(time)
+    pMain.textContent = "0.00";
+    minutes = 0;
+    seconds = 0;
+}
+btnPlay.addEventListener("click", fPlay);
+btnPause.addEventListener("click", fPause);
+btnStop.addEventListener("click", fStop)
