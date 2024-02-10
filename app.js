@@ -6,6 +6,7 @@ let btnCancel = document.querySelector(".button-cancel");
 let btnArchiwum = document.querySelector(".button-archiwum");
 let pMain = document.querySelector(".p-main");
 let pSecond = document.querySelector(".p-second");
+let archiwumList = document.querySelector(".timer-archiwum-list");
 let timeArray = [];
 let minutes = 0;
 let seconds = 0;
@@ -44,7 +45,24 @@ const fStop = () => {
     pMain.textContent = "0.00";
     minutes = 0;
     seconds = 0;
-}
+};
+
+const fCancel = () => {
+    timeArray = [];
+    archiwumList.textContent = "";
+};
+
+const fArchwiwum = () => {
+    timeArray.forEach(time => {
+        let li = document.createElement("li");
+        li.textContent = time;
+        archiwumList.appendChild(li);
+
+    })
+};
+
 btnPlay.addEventListener("click", fPlay);
 btnPause.addEventListener("click", fPause);
-btnStop.addEventListener("click", fStop)
+btnStop.addEventListener("click", fStop);
+btnCancel.addEventListener("click", fCancel);
+btnArchiwum.addEventListener("click", fArchwiwum);
