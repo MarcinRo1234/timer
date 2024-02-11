@@ -69,13 +69,11 @@ const fCancel = () => {
 };
 
 const fArchwiwum = () => {
-    archiwum.style.display = "flex";
-
-    
-};
+    archiwum.style.display= "flex";   
+}
 const fOption = () => {
     timerModal.style.visibility = "visible";
-    wrapper.style.backgroundColor = "bronze";
+    
 }
 const fClose = () => {
     timerModal.style.visibility = "hidden";
@@ -88,3 +86,6 @@ btnCancel.addEventListener("click", fCancel);
 btnArchiwum.addEventListener("click", fArchwiwum);
 btnOption.addEventListener("click", fOption);
 btnClose.addEventListener("click", fClose);
+
+// DO wymyślenia kwestia co jeśli użytkownik kliknie archiwum zanim użyje timera
+// 
