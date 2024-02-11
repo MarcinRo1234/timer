@@ -4,7 +4,9 @@
     margin: 0;
 }
 
-
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
 .wrapper {
     height: 100vh;
     display: flex;
@@ -16,10 +18,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    min-height: 300px;
     width: 500px;
-    background-color: yellow;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
     position: relative;
+    color: beige;
+    -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+    border-radius: 75px 20px 75px 20px;
+
     
 }
 .timer-option .fa-question {
@@ -35,11 +44,12 @@
     width: 200px;
 }
 .timer-screen h1 {
-    font-size: 40px;
+    font-size: 60px;
     margin-bottom: 10px;
 }
 .p-main {
-    font-size: 24px;
+    font-size: 30px;
+    margin: 20px 10px 20px;
 }
 .p-second {
     visibility: hidden;
@@ -50,6 +60,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin: 20px 10px 20px;
 }
 .timer-buttons .fa-regular {
     font-size: 20px;
@@ -62,8 +73,31 @@
 }
 .button-archiwum {
     flex-grow: 1;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .timer-archiwum {
     display: none;
+
+}
+.timer-modal {
+    height: 200px;
+    width: 400px;
+    background-color: yellow;
+    padding: 10px;
+    position: absolute;
+    visibility: hidden;
+    border-radius: 75px 20px 75px 20px;
+    
+    
+
+}
+.timer-modal__instruction {
+    padding: 20px;
+
+}
+.timer-modal__instruction .close {
+    position: absolute;
+}
+.timer-archiwum-list {
+    margin-bottom: 20px;
 }
