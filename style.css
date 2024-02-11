@@ -6,6 +6,9 @@
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 .wrapper {
     height: 100vh;
@@ -35,6 +38,8 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
+    padding: 10px;
+    cursor: pointer;
 }
 .timer-screen {
     display: flex;
@@ -70,23 +75,53 @@ body {
     height: 30px;
     margin: 0 5px;
     flex-shrink: 0;
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+}
+.timer-button:hover {
+    /* background-color:whitesmoke; */
+    border: 0.5px solid black;
+}
+
+.timer-button:hover i {
+    scale: 1.1;
 }
 .button-archiwum {
     flex-grow: 1;
     margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+}
+.button-archiwum:hover span {
+    scale: 1.1;
 }
 .timer-archiwum {
     display: none;
 
 }
+.timer-modal-hero {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+}
 .timer-modal {
-    height: 200px;
+    height: 250px;
     width: 400px;
-    background-color: yellow;
+    background-color: #fff;
     padding: 10px;
     position: absolute;
     visibility: hidden;
     border-radius: 75px 20px 75px 20px;
+    transform: translate( -50%, -50%);
+    margin:5px auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     
     
 
@@ -95,8 +130,17 @@ body {
     padding: 20px;
 
 }
+.timer-modal__instruction p {
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 10px;
+}
 .timer-modal__instruction .close {
-    position: absolute;
+    display: block;
+    margin: 5px auto;
+    width: 90px;
+    font-size: 15px;
+    background-color: none;
 }
 .timer-archiwum-list {
     margin-bottom: 20px;
