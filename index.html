@@ -13,7 +13,10 @@
 <body>
     <div class="wrapper">
         <div class="timer">
-            <div class="timer-option"><i class="fa-solid fa-question"></i></div>
+            <div class="timer-option">
+                <p><i class="fa-solid fa-question"></i>
+                </p>
+            </div>
             <div class="timer-screen">
                 <h1>Stoper</h1>
                 <p class="p-main">0:00</p>
@@ -24,7 +27,7 @@
                 <button class="timer-button button-pause"><i class="fa-regular fa-circle-pause"></i></button>
                 <button class="timer-button button-stop"><i class="fa-regular fa-circle-stop"></i></button>
                 <button class="timer-button button-cancel"><i class="fa-solid fa-x"></i></button>
-                <button class="timer-button button-archiwum">archiwum</button>
+                <button class="timer-button button-archiwum"><span>archiwum</span></button>
             </div>
             <div class="timer-archiwum">
                 <ul class="timer-archiwum-list">
@@ -32,18 +35,19 @@
                 </ul>
             </div>
         </div>
-            <div class="timer-modal">
-                <div class="timer-modal__instruction">
-                    <h1>Instrukcja:</h1>
-                    <p><i class="fa-regular fa-circle-play"></i> - start</p>
-                    <p><i class="fa-regular fa-circle-pause"></i> - pauza</p>
-                    <p><i class="fa-regular fa-circle-stop"></i> - stop</p>
-                    <p><i class="fa-solid fa-x"></i> - skasuj wszystko (łącznie z archiwum)</p>
-                    <p>archiwum - zobacz wcześniejsze pomiary</p>
-                    <button class="close">Zamknij</button>
+            <div class="timer-modal-hero">
+                <div class="timer-modal">
+                    <div class="timer-modal__instruction">
+                        <h1>Instrukcja:</h1>
+                        <p><i class="fa-regular fa-circle-play"></i> - start</p>
+                        <p><i class="fa-regular fa-circle-pause"></i> - pauza</p>
+                        <p><i class="fa-regular fa-circle-stop"></i> - stop</p>
+                        <p><i class="fa-solid fa-x"></i> - skasuj wszystko (łącznie z archiwum)</p>
+                        <p>archiwum - zobacz wcześniejsze pomiary</p>
+                        <button class="close">Zamknij</button>
+                    </div>
                 </div>
             </div>
-        
     </div>
     <script src="app.js"></script>
 </body>
