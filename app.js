@@ -10,8 +10,8 @@ let pSecond = document.querySelector(".p-second");
 let archiwum = document.querySelector(".timer-archiwum")
 let archiwumList = document.querySelector(".timer-archiwum-list");
 let timerModal = document.querySelector(".timer-modal");
-let wrapper = document.querySelector(".wrapper");
 let btnClose = document.querySelector(".close");
+let timerModalHero = document.querySelector(".timer-modal-hero");
 let timeArray = [];
 let minutes = 0;
 let seconds = 0;
@@ -41,7 +41,7 @@ const fPause = () => {
 
 const fStop = () => {
     
-    pSecond.innerHTML = `Twój ostatni czas: ${pMain.textContent}`
+    
     
     if(pMain.textContent !== "0.00") {
         pSecond.style.visibility = "visible"
@@ -50,11 +50,15 @@ const fStop = () => {
             let li = document.createElement("li");
             li.innerHTML = `Twój wynik:   <span>${time}</span>`;
             archiwumList.appendChild(li);
+            pSecond.innerHTML = `Twój ostatni czas: ${pMain.textContent}`
             
         });
         
         timeArray = [];
+    } else {
+        
     }
+    
     clearInterval(time)
     pMain.textContent = "0.00";
     minutes = 0;
@@ -73,10 +77,13 @@ const fArchwiwum = () => {
 }
 const fOption = () => {
     timerModal.style.visibility = "visible";
+    timerModalHero.style.visibility = "visible";
+
     
 }
 const fClose = () => {
     timerModal.style.visibility = "hidden";
+    timerModalHero.style.visibility = "hidden";
 }
 
 btnPlay.addEventListener("click", fPlay);
